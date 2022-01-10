@@ -12,8 +12,8 @@ This projects handles the task with minimal user interaction by analyzing your d
   >data_dis_num_feature=List of features names associated containing discrete numerical values<br />
   >data_cat_feature=List of features names associated containing categorical values<br />
   >dt_feature=List of features names associated containing datetime values<br />
-  <br />
-***2) plot_nan_feature(data, continuous_features, discrete_features, categorical_features,dependent_var)=*** <br />  It identifies the missing values in the dataset and visualize them their impact on dependent feature.<br />
+ 
+**2) plot_nan_feature(data, continuous_features, discrete_features, categorical_features,dependent_var)=** <br />  It identifies the missing values in the dataset and visualize them their impact on dependent feature.<br />
 >**Input:**<br />
   >data=Dataset<br />
   >continuous_features= List of features names associated containing continuous numerical values<br />
@@ -23,7 +23,7 @@ This projects handles the task with minimal user interaction by analyzing your d
 >**Output:**<br />
   >df= Dataset<br />
   >nan_features= List of feature names containing NaN values<br />
-<br />
+
 **3) visualize_imputation_impact(data,continuous_features, discrete_features, categorical_features,nan_features,dependent_var):**<br /> The function visualizes the impact of different NaN value impution on the distribution of values the feature.<br />
 >**Input:**<br />
   >data=Dataset<br />
@@ -34,7 +34,7 @@ This projects handles the task with minimal user interaction by analyzing your d
   >dependent_var= Dependent feature name in string format<br />
 >**Output:**<br />
   >None<br />
- <br />
+ 
 **4) nan_imputation(data,mean_feature,median_feature,mode_feature,random_feature,new_category):**<br /> The function imputes the NaN values in the feature as per the user input.<br />
 >**Input:**<br />
   >data=Dataset<br />
@@ -43,7 +43,7 @@ This projects handles the task with minimal user interaction by analyzing your d
   >mode_feature=List of feature names in which we have to carry out mode_imputation<br />
   >random_feature=List of feature names in which we have to carry out random_imputation<br />
   >new_category=List of feature names in which we we create a new category for the NaN values<br />
-  ><br />
+
 >**5) cross_visualization(data,continuous_features,discrete_features, categorical_features,dt_features):**<br /> The function visualise the relationship between the different independent features<br />
 >**Input:**<br />
   >df=Dataset<br />
@@ -53,7 +53,7 @@ This projects handles the task with minimal user interaction by analyzing your d
   >dt_feature=List of features names associated containing datetime values<br />
 >**Output:**<br />
   >continuous_features2=List of features names associated containing continuous numerical values, except the dependent feature<br />
-<br />
+
 **6) dependent_independent_visualization(data,continuous_features,discrete_features, categorical_features,dt_features,dependent_feature):**<br /> The function visualise the relationship between the different independent features.<br />
 >**Input:**<br />
   data_cont_num_feature= List of features names associated containing continuous numerical values<br />
@@ -63,7 +63,7 @@ This projects handles the task with minimal user interaction by analyzing your d
   dependent_var= Dependent feature name in string format<br />
 >**Output:**<br />
   None<br />
-<br />
+
 **7) outlier_removal(data,continuous_features,discrete_features,dependent_var,dependent_var_type,action):**<br /> The function visualizes the outlliers using the boxplot and removes them.<br />
 >**Input:**<br />
   >data=Dataset<br />
@@ -74,7 +74,7 @@ This projects handles the task with minimal user interaction by analyzing your d
   >action= Give input as 'remove' to delete the rows associated with the outliers<br />
 >**Output:**<br />
   >df=Dataset<br />
-<br />
+
 **8) transformation_visualization(data,continuous_features,discrete_features,dependent_feature):**<br />  The function visualize the feature after performing various transormation techniques.<br />
 >**Input:**<br />
   >data=Dataset<br />
@@ -83,33 +83,27 @@ This projects handles the task with minimal user interaction by analyzing your d
   >dependent_feature= Dependent feature name in string format<br />
 >**Output:**<br />
   >None<br />
- <br />
-**10) feature_transformation(train_data,test_data,continuous_features,discrete_features,transformation,dependent_feature):**<br />  The function performing the feature transormation technique as per the user input.<br />
+
+**9) feature_transformation(train_data,test_data,continuous_features,discrete_features,transformation,dependent_feature):**<br />  The function performing the feature transormation technique as per the user input.<br />
 >**Input:**<br />
 >train_data=Training dataset<br />
 >test_data=Test dataset<br />
 >continuous_features= List of features names associated containing continuous numerical values<br />
 >discrete_features=List of features names associated containing discrete numerical values<br />
->transformation=Type of transformation:<br />
->                                      none=No transformation<br />
->                                      log=Log Transformation<br />
->                                      sqrt= Square root Transformation<br />
->                                      reciprocal= Reciprocal Transformation<br />
->     .                                exp= Exponential Transformation<br />
->                                      boxcox=Boxcox Transformation<br />
+>transformation=Type of transformation: none=No transformation, log=Log Transformation, sqrt= Square root Transformation, reciprocal= Reciprocal Transformation, exp= Exponential Transformation, boxcox=Boxcox Transformation<br />
 >dependent_feature= Dependent feature name in string format<br />
 >**Output:**<br />
 >X_data=Training dataset<br />
 >t_data=Test dataset<br />
-<br />
-**11) categorical_transformation(train_data,categorical_encoding):**<br />  This function transforms the categorical featres in the numerical ones using encoding techniques.<br />
+
+**10) categorical_transformation(train_data,categorical_encoding):**<br />  This function transforms the categorical featres in the numerical ones using encoding techniques.<br />
 >**Input:**<br />
   >train_data=Training dataset<br />
   >categorical_encoding={'one_hot_encoding':[],'frequency_encoding':[],'mean_encoding':[],'target_guided_ordinal_encoding':{}}<br />
 >**Output:**<br />
   >X_data=Training dataset<br />
- <br />
-**12) feature_selection(Xtrain,ytrain, threshold, data_type, filter_type):**<br />This function performs the feature selection based on the dependent and independent features.<br />
+
+**11) feature_selection(Xtrain,ytrain, threshold, data_type, filter_type):**<br />This function performs the feature selection based on the dependent and independent features.<br />
 >**Input:**<br />
   >Xtrain=Training dataset<br />
   >ytrain=dependent data in training dataset<br />
@@ -122,9 +116,10 @@ This projects handles the task with minimal user interaction by analyzing your d
   >filter_type= If input data is numerical and output is numerical then --'in_num_out_num' as shown in the above dictionary<br />
 >**Output:**<br />
   >Xtrain= Training dataset<br />
-  feature_df= Dataframe containig features with their pvalue <br />
-**13) convert_dtype(data,categorical_features):**<br /> This function converts the categorical fetaures containing the numeric values but presented as categorical into the int format.<br />
-**Input:**<br />
+  >feature_df= Dataframe containig features with their pvalue <br />
+
+**12) convert_dtype(data,categorical_features):**<br /> This function converts the categorical fetaures containing the numeric values but presented as categorical into the int format.<br />
+>**Input:**<br />
   >data= Dataset<br />
   >categorical_features=List of features names associated containing categorical values<br />
 >**Output:**<br />
