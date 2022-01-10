@@ -162,6 +162,6 @@ Preparing data for model learning is one of the most important steps in any proj
   **Use same paramters for both train and test dataset for better accuracy**<br />
   
   
-  **A problem statement is given showing how we can use the function for both classification and regression case**
+  **We have implemented a bike sharing project to describe how the functions can be used for both the classification and regression problem statement.**
   
   
