@@ -1,7 +1,17 @@
 # Semi-Automated Data Processing
 Preparing data for model learning is one of the most important steps in any project—and traditionally, one of the most time consuming. Data Analysis plays a very important role in the entire Data Science Workflow. In fact, this takes most of the time of the Data science Workflow. There’s a nice quote (not sure who said it)According to Wikipedia, In statistics, exploratory data analysis (EDA) is an approach to analyzing data sets to summarize their main characteristics, often with visual methods. A statistical model can be used or not, but primarily EDA is for seeing what the data can tell us beyond the formal modeling or hypothesis testing task. Exploratory data analysis was promoted by John Tukey to encourage statisticians to explore the data, and possibly formulate hypotheses that could lead to new data collection and experiments.**“In Data Science, 80% of time spent prepare data, 20% of time spent complain about need for prepare data.”*
 
-**This projects handles the task with minimal user interaction** by analyzing your data and identifying fixes, screening out fields that are problematic or not likely to be useful, deriving new attributes when appropriate, and improving performance through intelligent screening techniques. You can use the project in **semi-interactive** fashion, previewing the changes before they are made and accept or reject them as you want. **All these steps has to be carried out by the user by calling the several functions as follows:**<br />
+**This projects handles the task with minimal user interaction** by analyzing your data and identifying fixes, screening out fields that are problematic or not likely to be useful, deriving new attributes when appropriate, and improving performance through intelligent screening techniques. You can use the project in **semi-interactive** fashion, previewing the changes before they are made and accept or reject them as you want. <br />
+
+**This project cover the 3 steps in any project workflow, comes before the model training:**<br />
+**1) Exploratory data analysis**<br />
+**2) Feature engineering**<br />
+**3) Feature selection**<br />
+
+<br />
+
+
+**All these steps has to be carried out by the user by calling the several functions as follows:**<br />
 <br />
 **1) identify_feature(data)=**<br />  This function identifies the categorical, continuous numerical and discrete numerical features in the datset. It also identifies datetime feature and extracts the relevant info from it.<br />
 >**Input:**<br />
