@@ -13,7 +13,7 @@ This projects handles the task with minimal user interaction by analyzing your d
   >data_cat_feature=List of features names associated containing categorical values<br />
   >dt_feature=List of features names associated containing datetime values<br />
   <br />
-**2) plot_nan_feature(data, continuous_features, discrete_features, categorical_features,dependent_var)=** <br />  It identifies the missing values in the dataset and visualize them their impact on dependent feature.<br />
+***2) plot_nan_feature(data, continuous_features, discrete_features, categorical_features,dependent_var)=*** <br />  It identifies the missing values in the dataset and visualize them their impact on dependent feature.<br />
 >**Input:**<br />
   >data=Dataset<br />
   >continuous_features= List of features names associated containing continuous numerical values<br />
