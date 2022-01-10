@@ -43,6 +43,8 @@ This projects handles the task with minimal user interaction by analyzing your d
   >mode_feature=List of feature names in which we have to carry out mode_imputation<br />
   >random_feature=List of feature names in which we have to carry out random_imputation<br />
   >new_category=List of feature names in which we we create a new category for the NaN values<br />
+>**Output:**<br />
+  >None
 
 **5) cross_visualization(data,continuous_features,discrete_features, categorical_features,dt_features):**<br /> The function visualise the relationship between the different independent features<br />
 >**Input:**<br />
