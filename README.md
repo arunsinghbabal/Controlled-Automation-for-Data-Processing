@@ -159,4 +159,9 @@ Preparing data for model learning is one of the most important steps in any proj
 
 
 ***Note***<br />
-  **Use same paramters for both train and test dataset for better accuracy**
+  **Use same paramters for both train and test dataset for better accuracy**<br />
+  
+  
+  **A problem statement is given showing how we can use the function for both classification and regression case**
+  
+  
