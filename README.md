@@ -84,17 +84,15 @@ This projects handles the task with minimal user interaction by analyzing your d
 >**Output:**<br />
   >None<br />
 
-**9) feature_transformation(train_data,test_data,continuous_features,discrete_features,transformation,dependent_feature):**<br />  The function performing the feature transormation technique as per the user input.<br />
+**9) feature_transformation(train_data,continuous_features,discrete_features,transformation,dependent_feature):**<br />  The function performing the feature transormation technique as per the user input.<br />
 >**Input:**<br />
 >train_data=Training dataset<br />
->test_data=Test dataset<br />
 >continuous_features= List of features names associated containing continuous numerical values<br />
 >discrete_features=List of features names associated containing discrete numerical values<br />
 >transformation=Type of transformation: none=No transformation, log=Log Transformation, sqrt= Square root Transformation, reciprocal= Reciprocal Transformation, exp= Exponential Transformation, boxcox=Boxcox Transformation<br />
 >dependent_feature= Dependent feature name in string format<br />
 >**Output:**<br />
 >X_data=Training dataset<br />
->t_data=Test dataset<br />
 
 **10) categorical_transformation(train_data,categorical_encoding):**<br />  This function transforms the categorical featres in the numerical ones using encoding techniques.<br />
 >**Input:**<br />
@@ -103,7 +101,7 @@ This projects handles the task with minimal user interaction by analyzing your d
 >**Output:**<br />
   >X_data=Training dataset<br />
 
-**11) feature_selection(Xtrain,ytrain, threshold, data_type, filter_type):**<br />This function performs the feature selection based on the dependent and independent features.<br />
+**11a) feature_selection(Xtrain,ytrain, threshold, data_type, filter_type):**<br />This function performs the feature selection based on the dependent and independent features in train dataset.<br />
 >**Input:**<br />
   >Xtrain=Training dataset<br />
   >ytrain=dependent data in training dataset<br />
@@ -117,6 +115,24 @@ This projects handles the task with minimal user interaction by analyzing your d
 >**Output:**<br />
   >Xtrain= Training dataset<br />
   >feature_df= Dataframe containig features with their pvalue <br />
+**11b) feature_selection(Xtrain,ytrain,Xtest,ytest, threshold, data_type, filter_type):**<br />This function performs the feature selection based on the dependent and independent features in train dataset.<br />
+>**Input:**<br />
+  >Xtrain=Training dataset<br />
+  >ytrain=dependent data in training dataset<br />
+  >Xtest=Test dataset<br />
+  >ytest=dependent data in test dataset<br />
+  >threshold= Threshold for the correlation<br />
+  >{'in_num_out_num':{'linear':['pearson'],'non-linear':['spearman']},<br />
+  >                   'in_num_out_cat':{'linear':['ANOVA'],'non-linear':['kendall']},<br />
+  >                   'in_cat_out_num':{'linear':['ANOVA'],'non-linear':['kendall']},<br />
+  >                   'in_cat_out_cat':{'chi_square_test':True,'mutual_info':True},}<br />
+  >data_type= Data linear or non-linearly dependent on the output label<br />
+  >filter_type= If input data is numerical and output is numerical then --'in_num_out_num' as shown in the above dictionary<br />
+>**Output:**<br />
+  >Xtrain= Training dataset<br />
+  >Xtest= Test dataset<br />
+  >feature_df= Dataframe containig features with their pvalue <br />
+
 
 **12) convert_dtype(data,categorical_features):**<br /> This function converts the categorical fetaures containing the numeric values but presented as categorical into the int format.<br />
 >**Input:**<br />
@@ -124,3 +140,7 @@ This projects handles the task with minimal user interaction by analyzing your d
   >categorical_features=List of features names associated containing categorical values<br />
 >**Output:**<br />
   >df=Dataset<br />
+
+
+***Note***<br />
+  **Use same paramters for both train and test dataset for better accuracy**
